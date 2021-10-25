@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Chnumber:</strong>
+  <%= @audio_channel.chNumber %>
+</p>
+
+<p>
+  <strong>Chname:</strong>
+  <%= @audio_channel.chName %>
+</p>
+
+<p>
+  <strong>Chmcastip:</strong>
+  <%= @audio_channel.chMcastIP %>
+</p>
+
+<p>
+  <strong>Chnotes:</strong>
+  <%= @audio_channel.chNotes %>
+</p>
+
+<%= link_to 'Edit', edit_audio_channel_path(@audio_channel) %> |
+<%= link_to 'Back', audio_channels_path %>

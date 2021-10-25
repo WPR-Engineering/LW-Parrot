@@ -1,0 +1,2 @@
+class AudioChannel < ApplicationRecord
+end

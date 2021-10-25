@@ -1,0 +1,33 @@
+<%= form_with(model: audio_channel) do |form| %>
+  <% if audio_channel.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(audio_channel.errors.count, "error") %> prohibited this audio_channel from being saved:</h2>
+
+      <ul>
+        <% audio_channel.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :chNumber %>
+    <%= form.number_field :chNumber %>
+  </div>
+
+  <div class="field">
+    <%= form.label :chName %>
+    <%= form.text_field :chName %>
+  </div>
+
+
+  <div class="field">
+    <%= form.label :chNotes %>
+    <%= form.text_area :chNotes %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

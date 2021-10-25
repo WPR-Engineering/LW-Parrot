@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Audio Channels</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Chnumber</th>
+      <th>Chname</th>
+      <th>Chmcastip</th>
+      <th>Chnotes</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @audio_channels.each do |audio_channel| %>
+      <tr>
+        <td><%= audio_channel.chNumber %></td>
+        <td><%= audio_channel.chName %></td>
+        <td><%= audio_channel.chMcastIP %></td>
+        <td><%= audio_channel.chNotes %></td>
+        <td><%= link_to 'Show', audio_channel %></td>
+        <td><%= link_to 'Edit', edit_audio_channel_path(audio_channel) %></td>
+        <td><%= link_to 'Destroy', audio_channel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Audio Channel', new_audio_channel_path %>
